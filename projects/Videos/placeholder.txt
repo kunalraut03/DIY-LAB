@@ -1,0 +1,8 @@
+This folder should contain video files for the projects page carousel:
+- video1.mp4
+- video2.mp4
+- video3.mp4
+- video4.mp4
+- video5.mp4
+
+Each video should showcase a different project or activity from DIY Lab.

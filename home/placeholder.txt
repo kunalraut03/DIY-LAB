@@ -1,0 +1,5 @@
+This folder should contain:
+- hero.jpg (hero background image)
+- feature1.jpg
+- feature2.jpg
+- feature3.jpg

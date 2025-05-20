@@ -1,0 +1,5 @@
+This folder should contain:
+- diy_logo.svg
+- va_logo.svg
+- join_dropdown.png (dropdown arrow icon)
+- enquiry_qr.png (QR code for enquiries)

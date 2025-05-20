@@ -1,0 +1,4 @@
+This folder should contain:
+- hero-bg.jpg (background for the projects page hero section)
+- project1.jpg through project8.jpg (project images)
+- project-idea.jpg (image for the submit project section)

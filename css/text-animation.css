@@ -1,0 +1,494 @@
+/* Text Animation Effects */
+
+/* Container for the entire animation section */
+.dual-image-text-container {
+  display: none;
+}
+
+/* Images on both sides of the animated text */
+.animation-image {
+  display: none;
+}
+
+/* Fixed animation visibility */
+
+/* Container for animation */
+.animation-between-images {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin: 30px 0;
+    background-color: #F9E0AE;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text container with fixed dimensions */
+.animated-text-container {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    height: 70px; /* Taller to ensure content is visible */
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden; /* Important to hide out-of-view text */
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation list */
+.animated-text {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    animation: textflip 10s ease-in-out infinite;
+}
+
+/* Style for each text item */
+.animated-text li {
+    height: 70px; /* Match container height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Animation keyframes */
+@keyframes textflip {
+    0%, 18% {
+        transform: translateY(0);
+    }
+    20%, 38% {
+        transform: translateY(-70px);
+    }
+    40%, 58% {
+        transform: translateY(-140px);
+    }
+    60%, 78% {
+        transform: translateY(-210px);
+    }
+    80%, 98% {
+        transform: translateY(-280px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Give each item a different color */
+.animated-text li:nth-child(1) { color: #E63946; }
+.animated-text li:nth-child(2) { color: #2A9D8F; }
+.animated-text li:nth-child(3) { color: #E9C46A; }
+.animated-text li:nth-child(4) { color: #457B9D; }
+.animated-text li:nth-child(5) { color: #8338EC; }
+
+/* For testing - make at least the first item visible */
+.animated-text li:first-child {
+    /* Ensure it's visible for debugging */
+    background-color: rgba(240, 240, 240, 0.3);
+}
+
+/* Ensure text visibility and readability */
+.text-image .text {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.text-image .text h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Create a subtle background pattern */
+.animation-between-images:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 49%, rgba(72, 142, 195, 0.1) 50%, transparent 51%);
+  background-size: 10px 10px;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* Enhance the animation with subtle hover effect */
+.animation-between-images:hover .animated-text {
+  animation-play-state: paused;
+}
+
+.animation-between-images:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Add subtle pulsing effect to draw attention */
+@keyframes pulse {
+  0% { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
+  50% { box-shadow: 0 5px 25px rgba(0, 102, 204, 0.2); }
+  100% { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animated-text li {
+    font-size: 1.4em;
+  }
+  
+  .animated-text-container {
+    max-width: 90%;
+  }
+}
+
+/* Fix for potential parent container issues */
+.text-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Debug styles to show boundaries - remove when alignment is correct */
+.animated-text-container {
+  border: 2px solid transparent;
+}
+
+.animated-text li {
+  /* Add background to see text container */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* Scroll-based animations for text and image sections */
+
+/* Base styles - ensure text is always visible */
+.text-image {
+    position: relative;
+    overflow: visible;
+    transition: transform 1s ease;
+    opacity: 1; /* Always visible */
+    margin-bottom: 40px;
+}
+
+/* Image animation styles */
+.text-image .image {
+    transition: transform 0.8s ease;
+}
+
+.text-image .image img {
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.8s ease;
+}
+
+/* Text styles - ensure visibility */
+.text-image .text {
+    opacity: 1; /* Always visible */
+    transition: transform 0.8s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Improve text readability */
+.text-image .text h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.text-image .text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.text-image .text h4 {
+    color: #444;
+    margin: 20px 0 10px;
+}
+
+.text-image .text ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.text-image .text li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Scroll animation effects */
+.text-image.visible .image {
+    transform: scale(1.02);
+}
+
+/* Right section specific layout */
+.text-image.right {
+    display: flex;
+    align-items: center;
+}
+
+.text-image.right .image {
+    flex: 0 0 45%;
+}
+
+.text-image.right .text {
+    flex: 0 0 55%;
+    padding-left: 25px;
+}
+
+/* Left section specific layout */
+.text-image.left {
+    display: flex;
+    align-items: center;
+}
+
+.text-image.left .image {
+    flex: 0 0 45%;
+}
+
+.text-image.left .text {
+    flex: 0 0 55%;
+    padding-right: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-image.left,
+    .text-image.right {
+        flex-direction: column;
+    }
+    
+    .text-image .text,
+    .text-image .image {
+        flex: 0 0 100%;
+        padding: 15px;
+    }
+    
+    .text-image .text {
+        margin-top: 15px;
+    }
+}
+/* Hover effects for text-image sections with both image and text visible */
+
+/* Layout structure */
+.text-image-container {
+    margin: 40px 0;
+}
+
+.text-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    padding: 15px;
+}
+
+.text-image.right {
+    flex-direction: row-reverse;
+}
+
+/* Image styling */
+.text-image .image {
+    flex: 0 0 40%;
+    transition: transform 0.4s ease;
+}
+
+.text-image .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text styling - visible but subtle initially */
+.text-image .text {
+    flex: 0 0 60%;
+    padding: 20px;
+    opacity: 0.8;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+}
+
+.text-image.right .text {
+    transform: translateX(10px);
+}
+
+/* Hover effects */
+.text-image:hover .image {
+    transform: scale(1.05);
+}
+
+.text-image:hover .text {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Text content styling */
+.text-image .text h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.text-image .text h4 {
+    margin: 20px 0 10px;
+    color: #444;
+}
+
+.text-image .text ul {
+    padding-left: 20px;
+}
+
+.text-image .text li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-image,
+    .text-image.right {
+        flex-direction: column;
+    }
+    
+    .text-image .image,
+    .text-image .text {
+        flex: 0 0 100%;
+    }
+    
+    .text-image .text,
+    .text-image.right .text {
+        transform: translateY(0);
+        margin-top: 15px;
+    }
+}
+/* Scroll-based animations for text and image sections */
+
+/* Base styles - ensure text is always visible */
+.text-image {
+    position: relative;
+    overflow: visible;
+    transition: transform 1s ease;
+    opacity: 1; /* Always visible */
+    margin-bottom: 40px;
+}
+
+/* Image animation styles */
+.text-image .image {
+    transition: transform 0.8s ease;
+}
+
+.text-image .image img {
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.8s ease;
+}
+
+/* Text styles - ensure visibility */
+.text-image .text {
+    opacity: 1; /* Always visible */
+    transition: transform 0.8s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Improve text readability */
+.text-image .text h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.text-image .text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.text-image .text h4 {
+    color: #444;
+    margin: 20px 0 10px;
+}
+
+.text-image .text ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.text-image .text li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Scroll animation effects */
+.text-image.visible .image {
+    transform: scale(1.02);
+}
+
+/* Right section specific layout */
+.text-image.right {
+    display: flex;
+    align-items: center;
+}
+
+.text-image.right .image {
+    flex: 0 0 45%;
+}
+
+.text-image.right .text {
+    flex: 0 0 55%;
+    padding-left: 25px;
+}
+
+/* Left section specific layout */
+.text-image.left {
+    display: flex;
+    align-items: center;
+}
+
+.text-image.left .image {
+    flex: 0 0 45%;
+}
+
+.text-image.left .text {
+    flex: 0 0 55%;
+    padding-right: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-image.left,
+    .text-image.right {
+        flex-direction: column;
+    }
+    
+    .text-image .text,
+    .text-image .image {
+        flex: 0 0 100%;
+        padding: 15px;
+    }
+    
+    .text-image .text {
+        margin-top: 15px;
+    }
+}

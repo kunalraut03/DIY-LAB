@@ -1,0 +1,858 @@
+/* Services Page Specific Styles */
+
+/* Hero Section */
+.services-hero {
+    background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url('../services/hero.jpg');
+    padding: 80px 0;
+}
+
+/* Services Intro Section */
+.services-intro {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.services-intro-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444444;
+}
+
+/* Services Offerings Section */
+.services-offerings {
+    padding: 40px 0 80px;
+    background-color: #FFFFFF;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.service-item.reversed {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    flex: 1;
+    min-height: 350px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.service-content h2 {
+    color: #C24914;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.service-content ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: #C24914;
+    border-radius: 50%;
+}
+
+/* Video Container Styles */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.service-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+/* Play/pause on hover */
+.video-container:hover .service-video {
+    transform: scale(1.05);
+}
+
+/* JavaScript will handle the actual play/pause functionality */
+
+/* CTA Section */
+.services-cta {
+    padding: 80px 0;
+    background-color: #F9E0AE;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #444444;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Charges information styling */
+.charges-info {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.charges-link {
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.charges-link:hover {
+    background-color: #222222;
+}
+
+.charges-note {
+    font-size: 0.95rem;
+    color: #666666;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .service-content {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-item,
+    .service-item.reversed {
+        flex-direction: column;
+    }
+    
+    .service-image {
+        min-height: 250px;
+        width: 100%;
+    }
+    
+    .service-content {
+        width: 100%;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .services-intro-text {
+        font-size: 1rem;
+    }
+    
+    .service-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .service-image {
+        min-height: 200px;
+    }
+}
+
+/* Modern Modal Styles - Complete Redesign */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    margin: 3% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: zoomIn 0.4s;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 22px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.modal-content h2 {
+    margin: 0;
+    padding: 30px 40px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    background-color: #C24914;
+    background-image: linear-gradient(135deg, #C24914, #E36B2C);
+    text-align: left;
+    position: relative;
+}
+
+.modal-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-image: linear-gradient(90deg, #FFB366, #FFCC80, #FFD699, #FFE0B3, #FFEECC);
+}
+
+/* Modern Form Styles */
+#visitUsForm {
+    padding: 30px 40px 40px;
+}
+
+#visitUsForm .form-group {
+    margin-bottom: 25px;
+}
+
+#visitUsForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+#visitUsForm input[type="text"],
+#visitUsForm input[type="email"],
+#visitUsForm input[type="tel"],
+#visitUsForm input[type="number"],
+#visitUsForm textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+#visitUsForm input:focus,
+#visitUsForm textarea:focus {
+    outline: none;
+    border-color: #E36B2C;
+    box-shadow: 0 0 0 3px rgba(227, 107, 44, 0.1);
+    background-color: #fff;
+}
+
+/* Modern Checkbox Group */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.checkbox-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-item label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.checkbox-item label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label:before {
+    background-color: #E36B2C;
+    border-color: #E36B2C;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Modern Radio Group */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.radio-item {
+    flex: 1;
+    position: relative;
+}
+
+.radio-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-item label {
+    display: block;
+    text-align: center;
+    padding: 12px 10px;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    color: #555;
+    font-size: 15px;
+}
+
+.radio-item input[type="radio"]:checked + label {
+    background-color: #E36B2C;
+    border-color: #E36B2C;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(227, 107, 44, 0.3);
+}
+
+/* Modern Submit Button */
+.submit-btn {
+    background-image: linear-gradient(135deg, #C24914, #E36B2C);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(227, 107, 44, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(227, 107, 44, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(227, 107, 44, 0.3);
+}
+
+/* Modern Error Message - Updated to only show icon when there's content */
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    min-height: 24px; /* Maintain consistent spacing */
+}
+
+.error-message:not(:empty)::before {
+    content: "!";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    margin-right: 8px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Modern Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .checkbox-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .modal-content h2 {
+        padding: 25px 30px;
+        font-size: 1.5rem;
+    }
+
+    #visitUsForm {
+        padding: 25px 30px 35px;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Updated Modal and Form Styles */
+.cta-button {
+    display: inline-block;
+    background-color: #C24914;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(194, 73, 20, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #a73a10;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(194, 73, 20, 0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 650px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.modal-content h2 {
+    margin: 0;
+    padding: 30px;
+    color: white;
+    font-size: 24px;
+    background-color: #C24914;
+    text-align: center;
+}
+
+#serviceEnquiryForm {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #C24914;
+    box-shadow: 0 0 0 3px rgba(194, 73, 20, 0.1);
+    outline: none;
+    background-color: #fff;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+    .checkbox-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #C24914;
+}
+
+.checkbox-item label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* Radio button styling */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-item {
+    flex: 1;
+}
+
+.radio-item input[type="radio"] {
+    display: none;
+}
+
+.radio-item label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.radio-item input[type="radio"]:checked + label {
+    background-color: #C24914;
+    border-color: #C24914;
+    color: white;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.submit-btn {
+    background-color: #C24914;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #a73a10;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(194, 73, 20, 0.3);
+}
+
+/* Success message styling */
+.success-message {
+    text-align: center;
+    padding: 30px;
+}
+
+.success-icon {
+    font-size: 60px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.success-message p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Body lock styles */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 85vh;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    #serviceEnquiryForm {
+        padding: 20px;
+    }
+    
+    .modal-content h2 {
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .radio-item label {
+        padding: 8px;
+    }
+}
+
+/* Success Notification Styling */
+.success-notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.success-notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.success-notification.show .success-content {
+    transform: translateY(0);
+}
+
+.success-content i {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.success-content h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.success-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.close-notification {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-notification:hover {
+    background-color: #3e8e41;
+}

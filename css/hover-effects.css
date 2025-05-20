@@ -1,0 +1,96 @@
+/* Hover effects for text-image sections with both image and text visible */
+
+/* Layout structure */
+.text-image-container {
+    margin: 40px 0;
+}
+
+.text-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    padding: 15px;
+}
+
+.text-image.right {
+    flex-direction: row-reverse;
+}
+
+/* Image styling */
+.text-image .image {
+    flex: 0 0 40%;
+    transition: transform 0.4s ease;
+}
+
+.text-image .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text styling - visible but subtle initially */
+.text-image .text {
+    flex: 0 0 60%;
+    padding: 20px;
+    opacity: 0.8;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+}
+
+.text-image.right .text {
+    transform: translateX(10px);
+}
+
+/* Hover effects */
+.text-image:hover .image {
+    transform: scale(1.05);
+}
+
+.text-image:hover .text {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Text content styling */
+.text-image .text h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.text-image .text h4 {
+    margin: 20px 0 10px;
+    color: #444;
+}
+
+.text-image .text ul {
+    padding-left: 20px;
+}
+
+.text-image .text li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-image,
+    .text-image.right {
+        flex-direction: column;
+    }
+    
+    .text-image .image,
+    .text-image .text {
+        flex: 0 0 100%;
+    }
+    
+    .text-image .text,
+    .text-image.right .text {
+        transform: translateY(0);
+        margin-top: 15px;
+    }
+}
