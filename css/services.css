@@ -1,12 +1,8 @@
-/* Services Page Specific Styles */
-
-/* Hero Section */
 .services-hero {
     background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url('../services/hero.jpg');
     padding: 80px 0;
 }
 
-/* Services Intro Section */
 .services-intro {
     padding: 60px 0;
     background-color: #FFFFFF;
@@ -21,7 +17,6 @@
     color: #444444;
 }
 
-/* Services Offerings Section */
 .services-offerings {
     padding: 40px 0 80px;
     background-color: #FFFFFF;
@@ -86,7 +81,6 @@
     border-radius: 50%;
 }
 
-/* Video Container Styles */
 .video-container {
     position: relative;
     overflow: hidden;
@@ -100,14 +94,10 @@
     transition: transform 0.5s;
 }
 
-/* Play/pause on hover */
 .video-container:hover .service-video {
     transform: scale(1.05);
 }
 
-/* JavaScript will handle the actual play/pause functionality */
-
-/* CTA Section */
 .services-cta {
     padding: 80px 0;
     background-color: #F9E0AE;
@@ -138,7 +128,6 @@
     margin-bottom: 40px;
 }
 
-/* Charges information styling */
 .charges-info {
     margin-top: 25px;
     text-align: center;
@@ -165,7 +154,6 @@
     font-style: italic;
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
     .service-content {
         padding: 30px;
@@ -211,7 +199,6 @@
     }
 }
 
-/* Modern Modal Styles - Complete Redesign */
 .modal {
     display: none;
     position: fixed;
@@ -283,7 +270,6 @@
     background-image: linear-gradient(90deg, #FFB366, #FFCC80, #FFD699, #FFE0B3, #FFEECC);
 }
 
-/* Modern Form Styles */
 #visitUsForm {
     padding: 30px 40px 40px;
 }
@@ -323,7 +309,6 @@
     background-color: #fff;
 }
 
-/* Modern Checkbox Group */
 .checkbox-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -386,7 +371,6 @@
     transform: rotate(45deg);
 }
 
-/* Modern Radio Group */
 .radio-group {
     display: flex;
     justify-content: space-between;
@@ -425,7 +409,6 @@
     box-shadow: 0 3px 8px rgba(227, 107, 44, 0.3);
 }
 
-/* Modern Submit Button */
 .submit-btn {
     background-image: linear-gradient(135deg, #C24914, #E36B2C);
     color: white;
@@ -452,14 +435,13 @@
     box-shadow: 0 4px 8px rgba(227, 107, 44, 0.3);
 }
 
-/* Modern Error Message - Updated to only show icon when there's content */
 .error-message {
     color: #e74c3c;
     font-size: 13px;
     margin-top: 6px;
     display: flex;
     align-items: center;
-    min-height: 24px; /* Maintain consistent spacing */
+    min-height: 24px;
 }
 
 .error-message:not(:empty)::before {
@@ -477,7 +459,6 @@
     font-size: 12px;
 }
 
-/* Modern Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -488,7 +469,6 @@
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .checkbox-group {
         grid-template-columns: 1fr;
@@ -515,7 +495,6 @@
     }
 }
 
-/* Updated Modal and Form Styles */
 .cta-button {
     display: inline-block;
     background-color: #C24914;
@@ -632,7 +611,6 @@
     color: #e74c3c;
 }
 
-/* Checkbox styling */
 .checkbox-group {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -663,7 +641,6 @@
     font-weight: normal;
 }
 
-/* Radio button styling */
 .radio-group {
     display: flex;
     justify-content: space-between;
@@ -723,7 +700,6 @@
     box-shadow: 0 5px 15px rgba(194, 73, 20, 0.3);
 }
 
-/* Success message styling */
 .success-message {
     text-align: center;
     padding: 30px;
@@ -747,7 +723,6 @@
     line-height: 1.5;
 }
 
-/* Body lock styles */
 body.modal-open {
     overflow: hidden;
     position: fixed;
@@ -757,7 +732,6 @@ body.modal-open {
     left: 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .modal-content {
         width: 95%;
@@ -787,7 +761,6 @@ body.modal-open {
     }
 }
 
-/* Success Notification Styling */
 .success-notification {
     position: fixed;
     top: 0;

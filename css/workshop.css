@@ -1,16 +1,12 @@
-/* Workshop Page Specific Styles */
-
 .workshop-hero {
     background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url('../workshop/workshop_hero.jpg');
 }
 
-/* Upcoming Workshops Section */
 .upcoming-workshops {
     padding: 80px 0;
     background-color: #FFFFFF;
 }
 
-/* Workshop Grid Section - 4x2 Layout */
 .workshop-categories {
     padding: 80px 0;
     background-color: #F9E0AE;
@@ -61,7 +57,6 @@
     overflow: hidden;
 }
 
-/* Ensure static thumbnails are always visible by default */
 .static-thumbnail {
     width: 100%;
     height: 100%;
@@ -71,7 +66,6 @@
     position: relative;
 }
 
-/* Only hide static thumbnail on hover */
 .workshop-container:hover .static-thumbnail {
     opacity: 0;
     z-index: 0;
@@ -94,31 +88,28 @@
     z-index: 2;
 }
 
-/* Auto-play video on hover */
 .workshop-container:hover video.hover-media {
     opacity: 1;
 }
 
-/* Slideshow Animation - Only activate on hover */
 .slideshow {
     display: flex;
-    width: 1100%; /* For up to 11 images */
+    width: 1100%;
     height: 100%;
     transition: none;
     animation: none;
 }
 
 .slideshow img {
-    width: 9.09%; /* 100% / 11 */
+    width: 9.09%;
     height: 100%;
     object-fit: cover;
 }
 
 .workshop-container:hover .slideshow {
-    animation: slideshow 33s infinite linear; /* Longer duration for more images */
+    animation: slideshow 33s infinite linear;
 }
 
-/* Modal styles - Updated to match service page */
 .modal {
     display: none;
     position: fixed;
@@ -354,7 +345,6 @@ input[type="date"]:focus {
     }
 }
 
-/* Special slideshow behavior for Resin Art and DIY Paper Art */
 .workshop-item h3.workshop-title:contains("Resin Art") + .workshop-container .slideshow,
 .workshop-item h3.workshop-title:contains("DIY Paper Art") + .workshop-container .slideshow {
     transition: none;
@@ -363,10 +353,9 @@ input[type="date"]:focus {
 
 .workshop-item h3.workshop-title:contains("Resin Art") + .workshop-container:hover .slideshow,
 .workshop-item h3.workshop-title:contains("DIY Paper Art") + .workshop-container:hover .slideshow {
-    animation: slideshow 33s infinite linear 1s; /* 33s duration, infinite repeat, 1s delay */
+    animation: slideshow 33s infinite linear 1s;
 }
 
-/* Fix for CSS selector not supported in some browsers */
 .workshop-item:has(h3:contains("Resin Art")) .slideshow,
 .workshop-item:has(h3:contains("DIY Paper Art")) .slideshow {
     transition: none;
@@ -375,22 +364,20 @@ input[type="date"]:focus {
 
 .workshop-item:has(h3:contains("Resin Art")):hover .slideshow,
 .workshop-item:has(h3:contains("DIY Paper Art")):hover .slideshow {
-    animation: slideshow 33s infinite linear 1s; /* 33s duration, infinite repeat, 1s delay */
+    animation: slideshow 33s infinite linear 1s;
 }
 
-/* Direct targeting for specific workshop items */
-.workshop-item:nth-child(7) .slideshow, /* Resin Art - adjust index as needed */
-.workshop-item:nth-child(8) .slideshow { /* DIY Paper Art - adjust index as needed */
+.workshop-item:nth-child(7) .slideshow,
+.workshop-item:nth-child(8) .slideshow {
     transition: none;
     animation: none;
 }
 
-.workshop-item:nth-child(7):hover .slideshow, /* Resin Art */
-.workshop-item:nth-child(8):hover .slideshow { /* DIY Paper Art */
-    animation: slideshow 33s infinite linear 1s; /* Start after 1s delay and run infinitely */
+.workshop-item:nth-child(7):hover .slideshow,
+.workshop-item:nth-child(8):hover .slideshow {
+    animation: slideshow 33s infinite linear 1s;
 }
 
-/* Adjust the slideshow animation to ensure smooth looping */
 @keyframes slideshow {
     0% {
         transform: translateX(0);
@@ -426,17 +413,15 @@ input[type="date"]:focus {
         transform: translateX(-81.81%);
     }
     100% {
-        transform: translateX(0); /* Return to start for smooth loop */
+        transform: translateX(0);
     }
 }
 
-/* Special slideshow behavior for Resin Art and DIY Paper Art */
-.workshop-item:nth-child(7):hover .slideshow, /* Resin Art */
-.workshop-item:nth-child(8):hover .slideshow { /* DIY Paper Art */
-    animation: slideshow 15s infinite linear 1s; /* Reduced from 33s to 15s for faster slideshow, with 1s delay */
+.workshop-item:nth-child(7):hover .slideshow,
+.workshop-item:nth-child(8):hover .slideshow {
+    animation: slideshow 15s infinite linear 1s;
 }
 
-/* Create a separate faster slideshow animation for Resin Art and DIY Paper Art */
 @keyframes fastSlideshow {
     0% {
         transform: translateX(0);
@@ -471,7 +456,6 @@ input[type="date"]:focus {
     70% {
         transform: translateX(-81.81%);
     }
-    /* Jump directly to the start instead of reversing */
     70.1% {
         transform: translateX(0);
     }
@@ -489,13 +473,11 @@ input[type="date"]:focus {
     }
 }
 
-/* Apply the slower animation to the specific workshop items */
-.workshop-item:nth-child(7):hover .slideshow, /* Resin Art */
-.workshop-item:nth-child(8):hover .slideshow { /* DIY Paper Art */
-    animation: fastSlideshow 12s infinite steps(1) 1s; /* Increased from 8s to 12s for slower slideshow */
+.workshop-item:nth-child(7):hover .slideshow,
+.workshop-item:nth-child(8):hover .slideshow {
+    animation: fastSlideshow 12s infinite steps(1) 1s;
 }
 
-/* Override the previous animation settings for these specific items */
 .workshop-item h3.workshop-title:contains("Resin Art") + .workshop-container:hover .slideshow,
 .workshop-item h3.workshop-title:contains("DIY Paper Art") + .workshop-container:hover .slideshow {
     animation: fastSlideshow 12s infinite steps(1) 1s;
@@ -506,7 +488,6 @@ input[type="date"]:focus {
     animation: fastSlideshow 12s infinite steps(1) 1s;
 }
 
-/* Workshop Information Section */
 .workshop-info {
     position: absolute;
     bottom: 0;
@@ -517,7 +498,7 @@ input[type="date"]:focus {
     padding: 20px;
     transform: translateY(70px);
     transition: transform 0.3s;
-    z-index: 3; /* Always keep info above all other elements */
+    z-index: 3;
 }
 
 .workshop-info h3 {
@@ -540,7 +521,6 @@ input[type="date"]:focus {
     opacity: 1;
 }
 
-/* Fix for mobile devices where hover may not work properly */
 @media (max-width: 768px) {
     .static-thumbnail {
         opacity: 1 !important;
@@ -564,7 +544,6 @@ input[type="date"]:focus {
     }
 }
 
-/* Workshop Card Styles */
 .workshop-card {
     background-color: #fff;
     border-radius: 8px;
@@ -661,7 +640,6 @@ input[type="date"]:focus {
     background-color: #9a3a10;
 }
 
-/* Workshop Categories Section */
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -699,7 +677,6 @@ input[type="date"]:focus {
     line-height: 1.5;
 }
 
-/* Workshop Information Section */
 .workshop-info {
     padding: 80px 0;
     background-color: #FFFFFF;
@@ -756,7 +733,6 @@ input[type="date"]:focus {
     line-height: 1.5;
 }
 
-/* Testimonials Section */
 .testimonials-section {
     padding: 80px 0;
     background-color: #F9E0AE;
@@ -822,7 +798,6 @@ input[type="date"]:focus {
     font-size: 0.9rem;
 }
 
-/* Responsive Styles for Workshop Page */
 @media (max-width: 1200px) {
     .workshop-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -905,7 +880,6 @@ input[type="date"]:focus {
     }
 }
 
-/* Add form error message styling */
 .form-error-message {
     color: #e74c3c;
     background-color: rgba(231, 76, 60, 0.1);
@@ -917,7 +891,6 @@ input[type="date"]:focus {
     display: none;
 }
 
-/* Update modal styles for proper error display */
 .form-group input.error,
 .form-group select.error {
     border-color: #e74c3c;
@@ -931,13 +904,11 @@ input[type="date"]:focus {
     display: none;
 }
 
-/* Other Workshop Input Container */
 #otherInputContainer {
     margin-top: 15px;
     display: none;
 }
 
-/* Success message styling */
 .success-message {
     text-align: center;
     padding: 30px 20px;
@@ -983,13 +954,11 @@ input[type="date"]:focus {
     background-color: #3e8e41;
 }
 
-/* Submit button loading state */
 .submit-btn:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
 
-/* Form Error Display */
 #formErrors {
     background-color: #ffdddd;
     border-left: 5px solid #f44336;
@@ -998,7 +967,6 @@ input[type="date"]:focus {
     display: none;
 }
 
-/* Success message styling */
 .success-message {
     text-align: center;
     padding: 30px 0;
@@ -1023,7 +991,6 @@ input[type="date"]:focus {
     line-height: 1.6;
 }
 
-/* Form note styling */
 .form-note {
     text-align: right;
     font-size: 14px;
@@ -1031,7 +998,6 @@ input[type="date"]:focus {
     margin-bottom: 5px;
 }
 
-/* Disable scrolling when modal is open - Fix the body lock */
 body.modal-open {
     overflow: hidden;
     position: fixed;

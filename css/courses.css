@@ -1,4 +1,3 @@
-/* Courses Page Specific Styles */
 .courses-section {
     padding: 80px 0;
     background-color: #FFFFFF;
@@ -25,7 +24,7 @@
 }
 
 .course-title {
-    color: #C24914; /* Warm Terracotta color */
+    color: #C24914;
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
@@ -118,12 +117,10 @@
     transform: scale(1.05);
 }
 
-/* Added for better loading performance */
 .course-video-player[preload="none"] {
     background-color: #000;
 }
 
-/* Media Queries */
 @media (max-width: 992px) {
     .course-row {
         flex-direction: column;

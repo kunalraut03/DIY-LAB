@@ -1,12 +1,8 @@
-/* Internship Page Specific Styles */
-
-/* Hero Section */
 .internship-hero {
     background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url('../assets/internship-hero.jpg');
     padding: 120px 0;
 }
 
-/* Intro Section - Updated Layout */
 .internship-intro {
     padding: 80px 0;
     background-color: #FFFFFF;
@@ -43,7 +39,6 @@
     color: #666666;
 }
 
-/* Responsive adjustments for intro section */
 @media (max-width: 992px) {
     .intro-content {
         flex-direction: column;
@@ -55,7 +50,6 @@
     }
 }
 
-/* Internship Options */
 .internship-options {
     padding: 80px 0;
     background-color: #F9E0AE;
@@ -157,7 +151,7 @@
 .apply-button:hover {
     background-color: #9a3a10;
 }
-/* Form Success and Error Messages */
+
 .form-success-message {
     background-color: #d4edda;
     color: #155724;
@@ -184,7 +178,7 @@
     border-radius: 8px;
     margin-bottom: 20px;
 }
-/* Why Choose Section */
+
 .why-choose {
     padding: 80px 0;
     background-color: #FFFFFF;
@@ -225,7 +219,6 @@
     color: #666666;
 }
 
-/* Application Form */
 .apply-section {
     padding: 80px 0;
     background-color: #F9E0AE;
@@ -309,7 +302,6 @@
     background-color: #9a3a10;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .intro-content,
     .internship-cards {

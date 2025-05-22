@@ -1,4 +1,3 @@
-/* Membership Hero Section */
 .membership-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/hero-membership.jpg');
     background-size: cover;
@@ -8,13 +7,11 @@
     text-align: center;
 }
 
-/* Polygon Gallery Section */
 .polygon-gallery-section {
     padding: 80px 0;
     background-color: #FFFFFF;
 }
 
-/* Updated Polygon Container Styles for better visibility */
 .polygon-container {
     display: flex;
     flex-wrap: wrap;
@@ -37,10 +34,9 @@
     perspective: 1000px;
     max-width: 350px;
     position: relative;
-    z-index: 1; /* Ensure proper stacking */
+    z-index: 1;
 }
 
-/* Updated polygon image styling with rotation and better blending */
 .polygon-image {
     position: relative;
     overflow: hidden;
@@ -48,30 +44,27 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s, box-shadow 0.5s;
     transform-style: preserve-3d;
-    height: 300px; /* Increased from 250px to 300px for better visibility */
-    background-color: #F9E0AE; /* Base background color for blend */
+    height: 300px;
+    background-color: #F9E0AE;
 }
 
 .polygon-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Changed from cover to contain for SVGs */
+    object-fit: contain;
     transition: transform 0.5s;
-    mix-blend-mode: multiply; /* Apply multiply blend mode */
+    mix-blend-mode: multiply;
     position: relative;
     z-index: 2;
     filter: contrast(1.2) brightness(1.05);
-    /* Add rotation of -90 degrees */
     transform: rotate(-90deg);
-    padding: 20px; /* Added padding to ensure SVG doesn't touch the edges */
+    padding: 20px;
 }
 
-/* Adjusted hover effect to maintain rotation */
 .polygon-image:hover img {
     transform: rotate(-90deg) scale(1.1);
 }
 
-/* Enhanced background overlay for better blending */
 .polygon-image::before {
     content: "";
     position: absolute;
@@ -80,7 +73,7 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, #F9E0AE 30%, #C24914 100%);
-    opacity: 0.25; /* Lower opacity for better visibility */
+    opacity: 0.25;
     mix-blend-mode: screen;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -90,7 +83,6 @@
     opacity: 0.4;
 }
 
-/* Refined background overlay for improved blend effect */
 .polygon-image::before {
     content: "";
     position: absolute;
@@ -99,23 +91,21 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, #F9E0AE 0%, #C24914 100%);
-    opacity: 0.3; /* Reduced opacity for better visibility */
+    opacity: 0.3;
     mix-blend-mode: screen;
     transition: opacity 0.3s ease;
-    z-index: 1; /* Place below the image */
+    z-index: 1;
 }
 
 .polygon-image:hover::before {
-    opacity: 0.5; /* Slightly increased on hover but still allowing visibility */
+    opacity: 0.5;
 }
 
-/* Adjust hover effects to ensure visibility */
 .polygon-image:hover {
     transform: translateY(-10px) rotateY(5deg);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Improved overlay for better contrast with the image */
 .polygon-overlay {
     position: absolute;
     bottom: 0;
@@ -126,14 +116,13 @@
     color: white;
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 3; /* Place above the image */
+    z-index: 3;
 }
 
-/* Ensure text is visible */
 .polygon-overlay h3 {
     font-size: 1.4rem;
     margin-bottom: 5px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Add shadow for better readability */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .polygon-overlay p {
@@ -141,7 +130,7 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s 0.1s, transform 0.3s 0.1s;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Add shadow for better readability */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .polygon-image:hover .polygon-overlay p {
@@ -149,7 +138,6 @@
     transform: translateY(0);
 }
 
-/* Enhanced about-text styling */
 .about-text {
     text-align: center;
     max-width: 900px;
@@ -162,10 +150,9 @@
     line-height: 1.8;
 }
 
-/* Membership Plans Section */
 .membership-plans-section {
     padding: 80px 0;
-    background-color: #F9E0AE; /* Creamy Beige background */
+    background-color: #F9E0AE;
 }
 
 .plans-container {
@@ -256,7 +243,6 @@
     transform: translateY(0);
 }
 
-/* Modal Styles - Update these */
 .modal {
     display: none;
     position: fixed;
@@ -294,7 +280,6 @@
     color: #000;
 }
 
-/* Form styling */
 .form-group {
     margin-bottom: 15px;
 }
@@ -345,7 +330,6 @@ input, select, textarea {
     margin-bottom: 15px;
 }
 
-/* Disable scrolling when modal is open - Fix the body lock */
 body.modal-open {
     overflow: hidden;
     position: fixed;
@@ -355,7 +339,6 @@ body.modal-open {
     left: 0;
 }
 
-/* Form Styles */
 .animated-form {
     display: flex;
     flex-direction: column;
@@ -457,7 +440,6 @@ body.modal-open {
     }
 }
 
-/* Success message styling */
 .success-message {
     text-align: center;
     padding: 20px;
@@ -482,7 +464,6 @@ body.modal-open {
     line-height: 1.5;
 }
 
-/* Fix for mobile devices */
 @media (max-width: 768px) {
     .modal-content {
         padding: 20px;
@@ -506,7 +487,6 @@ body.modal-open {
     }
 }
 
-/* Required fields note styling */
 .required-note {
     color: #666;
     margin: 15px 0 5px;
@@ -514,13 +494,12 @@ body.modal-open {
     text-align: left;
 }
 
-/* Remove any potential overflow issues */
 #membershipForm {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    padding-bottom: 20px; /* Add padding at bottom */
+    padding-bottom: 20px;
 }
 
 .submit-btn {
@@ -542,7 +521,6 @@ body.modal-open {
     color: #e74c3c;
 }
 
-/* Form Styles */
 .animated-form {
     display: flex;
     flex-direction: column;
@@ -618,7 +596,6 @@ body.modal-open {
     transform: translateY(0);
 }
 
-/* Form animation */
 .form-group input,
 .form-group select {
     transform: translateX(-20px);
@@ -653,8 +630,6 @@ body.modal-open {
     }
 }
 
-/* Add this to your existing CSS file */
-
 .required-note {
     color: #666;
     margin-top: 5px;
@@ -662,18 +637,15 @@ body.modal-open {
     text-align: right;
 }
 
-/* Required fields indicator */
 .form-group label:after {
     content: " *";
     color: #e74c3c;
 }
 
-/* Remove asterisk from Student's Email which is not required */
 .form-group label[for="studentEmail"]:after {
     content: "";
 }
 
-/* Form Error Message */
 .form-error-message {
     color: #e74c3c;
     background-color: rgba(231, 76, 60, 0.1);
@@ -685,7 +657,6 @@ body.modal-open {
     display: none;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
     .plans-container {
         gap: 20px;
@@ -723,7 +694,7 @@ body.modal-open {
     }
     
     .polygon-image {
-        height: 250px; /* Adjusted for mobile but still taller than original */
+        height: 250px;
     }
     
     .polygon-overlay h3 {
@@ -754,7 +725,7 @@ body.modal-open {
     }
 
     .polygon-image {
-        height: 220px; /* Adjusted for smaller screens */
+        height: 220px;
     }
 
     .about-text {
@@ -764,9 +735,6 @@ body.modal-open {
     }
 }
 
-/* Add these styles if they're not already in your membership.css file */
-
-/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -803,7 +771,6 @@ body.modal-open {
     color: #d9534f;
 }
 
-/* Form error styling */
 .form-error-message {
     color: #d9534f;
     margin-bottom: 15px;
@@ -824,12 +791,10 @@ body.modal-open {
     text-align: center;
 }
 
-/* Style for form inputs that have errors */
 .error::placeholder {
     color: #d9534f;
 }
 
-/* Form styling */
 #membershipForm .form-group {
     margin-bottom: 20px;
 }
@@ -892,11 +857,10 @@ body.modal-open {
     border-color: #d9534f !important;
 }
 
-/* Additional CSS for Modal - Make sure these are included */
 .modal {
     display: none;
     position: fixed;
-    z-index: 9999; /* High z-index to ensure modal appears on top */
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
@@ -933,7 +897,6 @@ body.modal-open {
     color: #d9534f;
 }
 
-/* Force modal to display properly - add !important to override any conflicts */
 #membershipModal {
     display: none !important;
 }
@@ -941,12 +904,10 @@ body.modal-open {
     display: block !important;
 }
 
-/* Debug styles - Add a border to help identify elements */
 .debug-border {
     border: 2px solid red !important;
 }
 
-/* Make sure plan buttons are clearly interactive */
 .plan-button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
@@ -961,12 +922,10 @@ body.modal-open {
     transform: translateY(0);
 }
 
-/* Fix for any potential conflicts with other libraries */
 * {
     box-sizing: border-box;
 }
 
-/* Clean up modal styles - Remove duplicate definitions and improve appearance */
 #membershipModal {
     display: none;
     position: fixed;
@@ -975,7 +934,7 @@ body.modal-open {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow-y: auto; /* Changed from auto to ensure scrolling works */
+    overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -993,8 +952,8 @@ body.modal-open {
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     position: relative;
     animation: modalFadeIn 0.4s ease-out;
-    max-height: 90vh; /* Set maximum height for very tall screens */
-    overflow-y: auto; /* Allow scrolling within the modal content */
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 @keyframes modalFadeIn {
@@ -1129,27 +1088,26 @@ body.modal-open {
     transform: translateY(0);
 }
 
-/* Responsive adjustments for modal */
 @media (max-width: 768px) {
     #membershipModal .modal-content {
-        margin: 5% auto; /* Reduced from 10% to show more content */
+        margin: 5% auto;
         padding: 25px 20px;
         width: 95%;
-        max-height: 85vh; /* Adjusted height for mobile */
+        max-height: 85vh;
     }
     
     #membershipModal h2 {
         font-size: 1.6rem;
-        margin-bottom: 20px; /* Reduced space */
+        margin-bottom: 20px;
     }
     
     #membershipModal .form-group {
-        margin-bottom: 12px; /* Slightly reduced spacing */
+        margin-bottom: 12px;
     }
     
     #membershipModal .form-group label {
         font-size: 14px;
-        margin-bottom: 4px; /* Reduced space */
+        margin-bottom: 4px;
     }
     
     #membershipModal .form-group input,
@@ -1161,15 +1119,14 @@ body.modal-open {
     #membershipModal .submit-btn {
         padding: 12px 16px;
         font-size: 15px;
-        margin-bottom: 10px; /* Added bottom margin to ensure visibility */
+        margin-bottom: 10px;
     }
     
-    /* Fix for very small screens */
     @media (max-width: 480px) {
         #membershipModal .modal-content {
-            margin: 2% auto; /* Further reduced to maximize space */
+            margin: 2% auto;
             padding: 20px 15px;
-            max-height: 90vh; /* Increased height allowance */
+            max-height: 90vh;
         }
         
         #membershipModal h2 {
@@ -1188,12 +1145,11 @@ body.modal-open {
         
         #membershipModal .submit-btn {
             margin-top: 5px;
-            margin-bottom: 15px; /* Extra space at bottom for visibility */
+            margin-bottom: 15px;
         }
     }
 }
 
-/* Ensure modal content is scrollable on mobile */
 @media (max-height: 700px) {
     #membershipModal .modal-content {
         max-height: 95vh;
@@ -1201,9 +1157,8 @@ body.modal-open {
     }
 }
 
-/* Form Error Message - Make sure it's hidden by default */
 #membershipModal .form-error-message {
-    display: none; /* Hide by default */
+    display: none;
     color: #e74c3c;
     background-color: rgba(231, 76, 60, 0.05);
     padding: 10px 15px;
@@ -1213,12 +1168,10 @@ body.modal-open {
     border-left: 3px solid #e74c3c;
 }
 
-/* Only show error message when it has content */
 #membershipModal .form-error-message:not(:empty) {
     display: block;
 }
 
-/* Enhanced Success Message Styling */
 #membershipModal .success-message {
     text-align: center;
     padding: 20px 10px;
