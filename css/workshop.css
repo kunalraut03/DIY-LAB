@@ -1,17 +1,14 @@
 .workshop-hero {
     background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url('../workshop/workshop_hero.jpg');
 }
-
 .upcoming-workshops {
     padding: 80px 0;
     background-color: #FFFFFF;
 }
-
 .workshop-categories {
     padding: 80px 0;
     background-color: #F9E0AE;
 }
-
 .workshop-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,21 +16,18 @@
     gap: 25px;
     margin-top: 40px;
 }
-
 .workshop-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
-
 .workshop-title {
     color: #333333;
     margin-bottom: 10px;
     font-size: 1.4rem;
     text-align: center;
 }
-
 .workshop-container {
     position: relative;
     background-color: white;
@@ -44,19 +38,16 @@
     height: 250px;
     width: 100%;
 }
-
 .workshop-container:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
-
 .workshop-thumbnail {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
-
 .static-thumbnail {
     width: 100%;
     height: 100%;
@@ -65,12 +56,10 @@
     z-index: 1;
     position: relative;
 }
-
 .workshop-container:hover .static-thumbnail {
     opacity: 0;
     z-index: 0;
 }
-
 .hover-media {
     position: absolute;
     top: 0;
@@ -82,16 +71,13 @@
     object-fit: cover;
     z-index: 0;
 }
-
 .workshop-container:hover .hover-media {
     opacity: 1;
     z-index: 2;
 }
-
 .workshop-container:hover video.hover-media {
     opacity: 1;
 }
-
 .slideshow {
     display: flex;
     width: 1100%;
@@ -99,17 +85,14 @@
     transition: none;
     animation: none;
 }
-
 .slideshow img {
     width: 9.09%;
     height: 100%;
     object-fit: cover;
 }
-
 .workshop-container:hover .slideshow {
     animation: slideshow 33s infinite linear;
 }
-
 .modal {
     display: none;
     position: fixed;
@@ -122,7 +105,6 @@
     background-color: rgba(0,0,0,0.8);
     transition: all 0.4s ease;
 }
-
 .modal-content {
     background-color: #fff;
     margin: 3% auto;
@@ -134,12 +116,10 @@
     position: relative;
     animation: modalFade 0.4s ease;
 }
-
 @keyframes modalFade {
     from {opacity: 0; transform: translateY(-30px);}
     to {opacity: 1; transform: translateY(0);}
 }
-
 .close-modal {
     position: absolute;
     top: 18px;
@@ -150,17 +130,14 @@
     transition: color 0.3s;
     color: #666;
 }
-
 .close-modal:hover {
     color: #C24914;
 }
-
 .workshop-form {
     display: flex;
     flex-direction: column;
     gap: 22px;
 }
-
 .workshop-form h2 {
     margin-bottom: 15px;
     color: #C24914;
@@ -168,14 +145,12 @@
     font-size: 30px;
     font-weight: 600;
 }
-
 .workshop-form label {
     font-weight: 500;
     margin-bottom: 6px;
     display: block;
     color: #333;
 }
-
 .workshop-form input, 
 .workshop-form select {
     padding: 14px;
@@ -186,14 +161,12 @@
     width: 100%;
     box-sizing: border-box;
 }
-
 .workshop-form input:focus,
 .workshop-form select:focus {
     border-color: #C24914;
     outline: none;
     box-shadow: 0 0 0 3px rgba(194, 73, 20, 0.15);
 }
-
 .workshop-form .checkbox-group {
     display: flex;
     flex-direction: column;
@@ -205,31 +178,26 @@
     border: 1px solid #eee;
     border-radius: 8px;
 }
-
 .workshop-form .checkbox-item {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-
 .workshop-form .checkbox-item input[type="checkbox"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
     accent-color: #C24914;
 }
-
 .workshop-form .checkbox-item label {
     cursor: pointer;
     margin-bottom: 0;
 }
-
 .required::after {
     content: "*";
     color: #C24914;
     margin-left: 4px;
 }
-
 .submit-btn {
     background-color: #C24914;
     color: white;
@@ -242,53 +210,43 @@
     transition: all 0.3s;
     margin-top: 15px;
 }
-
 .submit-btn:hover {
     background-color: #9a3a10;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(194, 73, 20, 0.3);
 }
-
 .submit-btn:active {
     transform: scale(0.98);
 }
-
 .form-group {
     position: relative;
 }
-
 .form-group.error input {
     border-color: #e74c3c;
     box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.15);
 }
-
 .error-message {
     color: #e74c3c;
     font-size: 14px;
     margin-top: 6px;
     display: none;
 }
-
 #otherInputContainer {
     display: none;
     margin-top: 12px;
     padding-left: 28px;
 }
-
 .modal-open {
     overflow: hidden;
 }
-
 .date-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 .date-field {
     width: 100%;
 }
-
 input[type="date"] {
     width: 100%;
     padding: 14px;
@@ -299,13 +257,11 @@ input[type="date"] {
     box-sizing: border-box;
     color: #333;
 }
-
 input[type="date"]:focus {
     border-color: #C24914;
     outline: none;
     box-shadow: 0 0 0 3px rgba(194, 73, 20, 0.15);
 }
-
 @keyframes slideshow {
     0% {
         transform: translateX(0);
@@ -344,40 +300,33 @@ input[type="date"]:focus {
         transform: translateX(0);
     }
 }
-
 .workshop-item h3.workshop-title:contains("Resin Art") + .workshop-container .slideshow,
 .workshop-item h3.workshop-title:contains("DIY Paper Art") + .workshop-container .slideshow {
     transition: none;
     animation: none;
 }
-
 .workshop-item h3.workshop-title:contains("Resin Art") + .workshop-container:hover .slideshow,
 .workshop-item h3.workshop-title:contains("DIY Paper Art") + .workshop-container:hover .slideshow {
     animation: slideshow 33s infinite linear 1s;
 }
-
 .workshop-item:has(h3:contains("Resin Art")) .slideshow,
 .workshop-item:has(h3:contains("DIY Paper Art")) .slideshow {
     transition: none;
     animation: none;
 }
-
 .workshop-item:has(h3:contains("Resin Art")):hover .slideshow,
 .workshop-item:has(h3:contains("DIY Paper Art")):hover .slideshow {
     animation: slideshow 33s infinite linear 1s;
 }
-
 .workshop-item:nth-child(7) .slideshow,
 .workshop-item:nth-child(8) .slideshow {
     transition: none;
     animation: none;
 }
-
 .workshop-item:nth-child(7):hover .slideshow,
 .workshop-item:nth-child(8):hover .slideshow {
     animation: slideshow 33s infinite linear 1s;
 }
-
 @keyframes slideshow {
     0% {
         transform: translateX(0);
@@ -416,12 +365,10 @@ input[type="date"]:focus {
         transform: translateX(0);
     }
 }
-
 .workshop-item:nth-child(7):hover .slideshow,
 .workshop-item:nth-child(8):hover .slideshow {
     animation: slideshow 15s infinite linear 1s;
 }
-
 @keyframes fastSlideshow {
     0% {
         transform: translateX(0);
@@ -472,22 +419,18 @@ input[type="date"]:focus {
         transform: translateX(-27.27%);
     }
 }
-
 .workshop-item:nth-child(7):hover .slideshow,
 .workshop-item:nth-child(8):hover .slideshow {
     animation: fastSlideshow 12s infinite steps(1) 1s;
 }
-
 .workshop-item h3.workshop-title:contains("Resin Art") + .workshop-container:hover .slideshow,
 .workshop-item h3.workshop-title:contains("DIY Paper Art") + .workshop-container:hover .slideshow {
     animation: fastSlideshow 12s infinite steps(1) 1s;
 }
-
 .workshop-item:has(h3:contains("Resin Art")):hover .slideshow,
 .workshop-item:has(h3:contains("DIY Paper Art")):hover .slideshow {
     animation: fastSlideshow 12s infinite steps(1) 1s;
 }
-
 .workshop-info {
     position: absolute;
     bottom: 0;
@@ -500,50 +443,312 @@ input[type="date"]:focus {
     transition: transform 0.3s;
     z-index: 3;
 }
-
 .workshop-info h3 {
     margin-bottom: 5px;
     font-size: 1.3rem;
 }
-
 .workshop-info p {
     font-size: 0.9rem;
     line-height: 1.4;
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 .workshop-container:hover .workshop-info {
     transform: translateY(0);
 }
-
 .workshop-container:hover .workshop-info p {
     opacity: 1;
 }
-
 @media (max-width: 768px) {
     .static-thumbnail {
         opacity: 1 !important;
         display: block !important;
         z-index: 2 !important;
     }
-    
     .hover-media {
         display: none;
     }
-    
-    .workshop-container:active .static-thumbnail {
-        opacity: 0;
-        z-index: 0;
+    .video-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+        border: none;
+        color: white;
+        font-size: 16px;
+        z-index: 20;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    
-    .workshop-container:active .hover-media {
-        display: block;
+    .play-button {
+        min-width: 280px !important;
+        min-height: 160px !important;
+        opacity: 0 !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 280px;
+        height: 160px;
+        border-radius: 50%;
+        background: rgba(194, 73, 20, 0.8);
+        border: none;
+        color: white;
+        font-size: 30px;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
         opacity: 1;
-        z-index: 3;
+    }
+    .slide-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 18px;
+        z-index: 15;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide-nav.prev {
+        left: 15px;
+    }
+    .slide-nav.next {
+        right: 15px;
+    }
+    video::-webkit-media-controls-play-button,
+    video::-webkit-media-controls-start-playback-button {
+        opacity: 0 !important;
+        pointer-events: none;
+    }
+    .workshop-thumbnail video::after,
+    .workshop-thumbnail video::before,
+    .workshop-container video::after,
+    .workshop-container video::before,
+    .mobile-overlay::after,
+    .mobile-overlay::before {
+        display: none !important;
+    }
+    .simplified-slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 100;
+        display: none;
+    }
+    .simplified-slideshow img {
+        transition: opacity 0.3s ease;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    .slide-counter {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        z-index: 102;
+    }
+    .slide-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 101;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .slide-nav.prev {
+        left: 15px;
+    }
+    .slide-nav.next {
+        right: 15px;
+    }
+    .video-close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+        border: none;
+        color: white;
+        font-size: 18px;
+        z-index: 102;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .simplified-slideshow {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: #000 !important;
+        z-index: 1000 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .simplified-slideshow img {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        max-width: 90% !important;
+        max-height: 80% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+    .slide-counter {
+        font-family: Arial, sans-serif !important;
+        font-weight: bold !important;
+        letter-spacing: 1px !important;
+        z-index: 1002 !important;
+        position: fixed !important;
+        bottom: 20px !important;
+    }
+    .slide-nav {
+        position: fixed !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        color: white !important;
+        border: none !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 50% !important;
+        font-size: 18px !important;
+        cursor: pointer !important;
+        z-index: 1001 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3) !important;
+    }
+    .slide-nav.prev {
+        left: 15px !important;
+    }
+    .slide-nav.next {
+        right: 15px !important;
+    }
+    .video-close-btn {
+        position: fixed !important;
+        top: 15px !important;
+        right: 15px !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important;
+        background: rgba(0, 0, 0, 0.7) !important;
+        border: none !important;
+        color: white !important;
+        font-size: 18px !important;
+        z-index: 1002 !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3) !important;
+    }
+    .play-button {
+        opacity: 0 !important;
+        display: flex !important;
+        visibility: visible !important;
+    }
+    .slideshow-overlay .slide-nav {
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 100 !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        background-color: rgba(0, 0, 0, 0.6) !important;
+        color: white !important;
+        border: none !important;
+    }
+    .slideshow-overlay .slide-nav.prev {
+        left: 10px !important;
+        right: auto !important;
+    }
+    .slideshow-overlay .slide-nav.next {
+        right: 10px !important;
+        left: auto !important;
+    }
+    .slideshow-overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 50 !important;
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        overflow: hidden !important;
+    }
+    .slideshow-container {
+        position: relative !important;
+        overflow: visible !important;
+    }
+    .slideshow-container img {
+        max-width: 90% !important;
+        max-height: 90% !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+    .slide-counter-inline {
+        position: absolute !important;
+        bottom: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        background-color: rgba(0,0,0,0.7) !important;
+        color: white !important;
+        padding: 5px 10px !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+        z-index: 60 !important;
+    }
+    .slideshow-overlay .slide-nav {
+        z-index: 60 !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
     }
 }
-
 .workshop-card {
     background-color: #fff;
     border-radius: 8px;
@@ -551,29 +756,24 @@ input[type="date"]:focus {
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .workshop-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
-
 .workshop-image {
     position: relative;
     height: 200px;
     overflow: hidden;
 }
-
 .workshop-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
-
 .workshop-card:hover .workshop-image img {
     transform: scale(1.1);
 }
-
 .workshop-date {
     position: absolute;
     top: 15px;
@@ -585,47 +785,39 @@ input[type="date"]:focus {
     text-align: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
-
 .workshop-date .day {
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1;
 }
-
 .workshop-date .month {
     display: block;
     font-size: 0.9rem;
     text-transform: uppercase;
 }
-
 .workshop-content {
     padding: 20px;
 }
-
 .workshop-content h3 {
     color: #333333;
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
-
 .workshop-details {
     color: #666666;
     font-size: 0.9rem;
     margin-bottom: 8px;
 }
-
 .workshop-details i {
     color: #C24914;
     margin-right: 5px;
 }
-
 .workshop-content p {
     color: #666666;
     margin: 15px 0;
     line-height: 1.6;
 }
-
 .workshop-button {
     display: inline-block;
     background-color: #C24914;
@@ -635,18 +827,15 @@ input[type="date"]:focus {
     transition: background-color 0.3s;
     font-weight: 500;
 }
-
 .workshop-button:hover {
     background-color: #9a3a10;
 }
-
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
-
 .category-card {
     background-color: white;
     border-radius: 8px;
@@ -655,47 +844,39 @@ input[type="date"]:focus {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
-
 .category-card:hover {
     transform: translateY(-10px);
 }
-
 .category-icon {
     font-size: 2.5rem;
     color: #C24914;
     margin-bottom: 20px;
 }
-
 .category-card h3 {
     color: #333333;
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
-
 .category-card p {
     color: #666666;
     line-height: 1.5;
 }
-
 .workshop-info {
     padding: 80px 0;
     background-color: #FFFFFF;
 }
-
 .info-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
-
 .info-card {
     background-color: #f8f8f8;
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
-
 .info-card h3 {
     color: #333333;
     margin-bottom: 20px;
@@ -703,7 +884,6 @@ input[type="date"]:focus {
     position: relative;
     padding-bottom: 10px;
 }
-
 .info-card h3::after {
     content: "";
     position: absolute;
@@ -713,7 +893,6 @@ input[type="date"]:focus {
     height: 3px;
     background-color: #C24914;
 }
-
 .info-qr-code {
     max-width: 150px;
     display: block;
@@ -721,42 +900,35 @@ input[type="date"]:focus {
     border: 3px solid #F9E0AE;
     border-radius: 8px;
 }
-
 .policy-list {
     list-style: disc;
     padding-left: 20px;
     color: #666666;
 }
-
 .policy-list li {
     margin-bottom: 10px;
     line-height: 1.5;
 }
-
 .testimonials-section {
     padding: 80px 0;
     background-color: #F9E0AE;
 }
-
 .testimonials-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
-
 .testimonial {
     background-color: white;
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 .testimonial-content {
     position: relative;
     padding-top: 20px;
 }
-
 .testimonial-content::before {
     content: '"';
     position: absolute;
@@ -767,44 +939,37 @@ input[type="date"]:focus {
     opacity: 0.3;
     line-height: 1;
 }
-
 .testimonial-content p {
     color: #666666;
     line-height: 1.7;
     font-style: italic;
 }
-
 .testimonial-author {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
-
 .testimonial-author img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 15px;
 }
-
 .testimonial-author h4 {
     color: #333333;
     margin-bottom: 5px;
     font-size: 1.1rem;
 }
-
 .testimonial-author p {
     color: #C24914;
     font-size: 0.9rem;
 }
-
 @media (max-width: 1200px) {
     .workshop-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
     }
 }
-
 @media (max-width: 992px) {
     .workshop-grid, 
     .categories-grid, 
@@ -812,12 +977,10 @@ input[type="date"]:focus {
     .testimonials-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     .workshop-container {
         height: 250px;
     }
 }
-
 @media (max-width: 768px) {
     .workshop-grid, 
     .categories-grid, 
@@ -825,61 +988,48 @@ input[type="date"]:focus {
     .testimonials-container {
         grid-template-columns: 1fr;
     }
-    
     .info-cards {
         gap: 20px;
     }
-    
     .info-card {
         padding: 20px;
     }
-    
     .category-icon {
         font-size: 2rem;
     }
-    
     .workshop-container {
         height: 300px;
     }
 }
-
 @media (max-width: 480px) {
     .workshop-date {
         top: 10px;
         right: 10px;
         padding: 5px 10px;
     }
-    
     .workshop-date .day {
         font-size: 1.2rem;
     }
-    
     .workshop-date .month {
         font-size: 0.8rem;
     }
-    
     .category-icon {
         font-size: 2rem;
     }
-    
     .testimonial {
         padding: 20px;
     }
-    
     .testimonial-content::before {
         font-size: 3rem;
     }
-    
     .testimonial-author img {
         width: 40px;
         height: 40px;
     }
-    
     .workshop-container {
         height: 250px;
     }
 }
-
 .form-error-message {
     color: #e74c3c;
     background-color: rgba(231, 76, 60, 0.1);
@@ -890,54 +1040,45 @@ input[type="date"]:focus {
     font-weight: 500;
     display: none;
 }
-
 .form-group input.error,
 .form-group select.error {
     border-color: #e74c3c;
     background-color: rgba(231, 76, 60, 0.05);
 }
-
 .error-message {
     color: #e74c3c;
     font-size: 14px;
     margin-top: 5px;
     display: none;
 }
-
 #otherInputContainer {
     margin-top: 15px;
     display: none;
 }
-
 .success-message {
     text-align: center;
     padding: 30px 20px;
     animation: fadeIn 0.5s ease-in-out;
 }
-
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-
 .success-icon {
     font-size: 60px;
     color: #4CAF50;
     margin-bottom: 20px;
 }
-
 .success-message h3 {
     font-size: 24px;
     color: #333;
     margin-bottom: 15px;
 }
-
 .success-message p {
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
 }
-
 .close-success-btn {
     background-color: #4CAF50;
     color: white;
@@ -949,16 +1090,13 @@ input[type="date"]:focus {
     margin-top: 20px;
     transition: background-color 0.3s;
 }
-
 .close-success-btn:hover {
     background-color: #3e8e41;
 }
-
 .submit-btn:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
-
 #formErrors {
     background-color: #ffdddd;
     border-left: 5px solid #f44336;
@@ -966,38 +1104,32 @@ input[type="date"]:focus {
     margin-bottom: 15px;
     display: none;
 }
-
 .success-message {
     text-align: center;
     padding: 30px 0;
     animation: fadeIn 0.5s ease;
 }
-
 .success-icon {
     font-size: 60px;
     color: #4CAF50;
     margin-bottom: 20px;
 }
-
 .success-message h3 {
     color: #333;
     margin-bottom: 15px;
     font-size: 24px;
 }
-
 .success-message p {
     color: #666;
     font-size: 16px;
     line-height: 1.6;
 }
-
 .form-note {
     text-align: right;
     font-size: 14px;
     color: #666;
     margin-bottom: 5px;
 }
-
 body.modal-open {
     overflow: hidden;
     position: fixed;
