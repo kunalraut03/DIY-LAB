@@ -74,11 +74,11 @@
     }
 }
 
-.animated-text li:nth-child(1) { color: #E63946; }
-.animated-text li:nth-child(2) { color: #2A9D8F; }
-.animated-text li:nth-child(3) { color: #E9C46A; }
-.animated-text li:nth-child(4) { color: #457B9D; }
-.animated-text li:nth-child(5) { color: #8338EC; }
+.animated-text li:nth-child(1) { color: #ff0015; }
+.animated-text li:nth-child(2) { color: #01f9dc; }
+.animated-text li:nth-child(3) { color: #f6b000; }
+.animated-text li:nth-child(4) { color: #0799f5; }
+.animated-text li:nth-child(5) { color: #6d0df4; }
 
 .animated-text li:first-child {
     background-color: rgba(240, 240, 240, 0.3);
